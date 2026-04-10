@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  sales_report:
+    build: .
+    container_name: sales_report_app
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+    volumes:
+      - ./:/app  # Mount current directory to /app for live-reloading (optional)
